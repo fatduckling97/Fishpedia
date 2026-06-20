@@ -1,2 +1,1 @@
-Gurame|River|Common|Night|0.00|100|Gurame Bakar, Gurame Goreng, Pepes Gurame|-
-River King|Cave|Super Rare|Night|0.00|1000000000|-|Ancient fish
+Sturgeon|River|Rare|Noon|100.00|15800|-|-

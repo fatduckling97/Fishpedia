@@ -18,7 +18,7 @@ int main() {
         printf("2. Show all fish\n");
         printf("3. Search fish\n");
         printf("4. Delete fish\n");
-        printf("4. Exit Fishpedia\n\n");
+        printf("5. Exit Fishpedia\n\n");
 
         printf("Choose: ");
         input = scanf("%d", &choose);
@@ -55,7 +55,7 @@ int main() {
             scanf(" %19[^\n]", fishList[fishCount].time);
 
             printf("Enter record size  : ");
-            scanf(" %f", &fishList[fishCount].recordSize);
+            scanf(" %lf", &fishList[fishCount].recordSize);
 
             printf("Enter fish price   : ");
             scanf(" %d", &fishList[fishCount].price);
@@ -82,7 +82,7 @@ int main() {
                     printf("Habitat : %s\n", fishList[i].habitat);
                     printf("Rarity  : %s\n", fishList[i].rarity);
                     printf("Time    : %s\n", fishList[i].time);
-                    printf("Record  : %lf kg\n", fishList[i].recordSize);
+                    printf("Record  : %.4f kg\n", fishList[i].recordSize);
                     printf("Price   : $%d\n", fishList[i].price);
                     printf("Dishes  : %s\n", fishList[i].dishName);
                     printf("Notes   : %s\n", fishList[i].specialNote);
@@ -126,7 +126,7 @@ int main() {
             scanf(" %49[^\n]", deleteName);
 
             for(int i = 0; i < fishCount; i++) {
-                if (strcmp(fishList[i].name == deleteName) == 0) {
+                if (strcmp(fishList[i].name, deleteName) == 0) {
                     found = 1;
                     deleteIndex = i;
                     break;
@@ -142,7 +142,7 @@ int main() {
                 }
                 fishCount--;
 
-                printf("Fish deleted successfully.\n\n")
+                printf("Fish deleted successfully.\n\n");
             }
         }
         else if (choose == 5) {
